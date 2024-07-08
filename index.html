@@ -10,10 +10,14 @@
 </head>
 <body>
     <p>MY PLAYLIST#1</p>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="filterSongs()" placeholder="Search for songs...">
+    </div>
     
-    <div class="lagu">
+    <div class="lagu" data-title="I Think I Like When It Rains">
         <img src="/img/I THINK I LIKE WHEN IT RAINS.jpeg" alt="Song 1">
-        <p class="lagu-title">I Think I like When It Rains - WILLIS</p>
+        <p class="lagu-title">I Think I Like When It Rains - WILLIS</p>
         <div class="btn-container">
             <button class="btn" onclick="playSong('song1')">Play</button>
             <button class="btn" onclick="pauseSong('song1')">Pause</button>
@@ -21,7 +25,7 @@
         <audio id="song1" src="/music/I Think I Like When It Rains (320 kbps).mp3"></audio>
     </div>
     
-    <div class="lagu">
+    <div class="lagu" data-title="No Other Heart">
         <img src="/img/Another one Mac demarco.jpeg" alt="Song 2">
         <p class="lagu-title">No Other Heart - Mac Demarco</p>
         <div class="btn-container">
@@ -31,7 +35,7 @@
         <audio id="song2" src="/music/Mac DeMarco -- No Other Heart.mp3"></audio>
     </div>
     
-    <div class="lagu">
+    <div class="lagu" data-title="Kiss and Say Goodbye">
         <img src="/img/Kiss and Say.jpeg" alt="Song 3">
         <p class="lagu-title">Kiss and Say Goodbye - The Manhattans </p>
         <div class="btn-container">
@@ -41,7 +45,7 @@
         <audio id="song3" src="/music/The Manhattans - Kiss and Say Goodbye.mp3"></audio>
     </div>
     
-    <div class="lagu">
+    <div class="lagu" data-title="Lovers Rock">
         <img src="/img/Lovers Rock.jpeg" alt="Song 4">
         <p class="lagu-title">Lovers Rock - Tv Girl</p>
         <div class="btn-container">
@@ -51,9 +55,9 @@
         <audio id="song4" src="/music/Lovers Rock.mp3"></audio>
     </div>
     
-    <div class="lagu">
+    <div class="lagu" data-title="Last Night On Earth">
         <img src="/img/Green Day - 21st Century Breakdown - Album cover….jpeg" alt="Song 5">
-        <p class="lagu-title">Last Night On Earth-Green day</p>
+        <p class="lagu-title">Last Night On Earth - Green Day</p>
         <div class="btn-container">
             <button class="btn" onclick="playSong('song5')">Play</button>
             <button class="btn" onclick="pauseSong('song5')">Pause</button>
@@ -61,7 +65,7 @@
         <audio id="song5" src="/music/last night on earth.mp3"></audio>
     </div>
     
-    <div class="lagu">
+    <div class="lagu" data-title="Creep">
         <img src="/img/Radiohead - The Bends.jpeg" alt="Song 6">
         <p class="lagu-title">Creep - Radiohead</p>
         <div class="btn-container">
@@ -71,7 +75,7 @@
         <audio id="song6" src="/music/Creep (1).mp3"></audio>
     </div>
 
-    <div class="lagu">
+    <div class="lagu" data-title="I Can't Handle Change">
         <img src="/img/I Can't Handle Change.jpeg" alt="Song 7">
         <p class="lagu-title">I Can't Handle Change - Roar</p>
         <div class="btn-container">
@@ -81,7 +85,7 @@
         <audio id="song7" src="/music/I cant handle.mp3"></audio>
     </div>
 
-    <div class="lagu">
+    <div class="lagu" data-title="Mr Loverman">
         <img src="/img/Ricky Montgomery _ Montgomery Ricky.jpeg" alt="Song 8">
         <p class="lagu-title">Mr Loverman - Ricky Montgomery </p>
         <div class="btn-container">
@@ -90,6 +94,8 @@
         </div>
         <audio id="song8" src="/music/Ricky Montgomery - Mr Loverman.mp3"></audio>
     </div>
+
+    <p>Created by Evan || 2024</p>
 
     <script src="/main.js"></script>
 </body>
