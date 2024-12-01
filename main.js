@@ -1,14 +1,23 @@
        
-       // Play and Pause functionality
-       function playSong(id) {
-        const audio = document.getElementById(id);
-        audio.play();
-    }
+// Play and Pause functionality
+let currentAudio = null; // To keep track of the currently playing audio
 
-    function pauseSong(id) {
-        const audio = document.getElementById(id);
-        audio.pause();
+function playSong(id) {
+    const audio = document.getElementById(id);
+    // Pause the current audio if another one is playing
+    if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause();
     }
+    audio.play();
+    currentAudio = audio; // Set the current audio to the one being played
+}
+
+function pauseSong(id) {
+    const audio = document.getElementById(id);
+    audio.pause();
+    currentAudio = null; // Reset the current audio tracker
+}
+
     
     // Filter songs functionality
     function filterSongs() {
@@ -30,7 +39,7 @@
         // Tampilkan pesan jika tidak ada lagu yang cocok
         noSongsMessage.classList.toggle('hidden', hasVisibleSongs);
     }
-    
+
        
        // Scroll to the content section
         function scrollToContent() {
