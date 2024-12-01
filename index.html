@@ -4,236 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Playlist</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+
+    
 </head>
-<body>
-    <p>MY PLAYLIST#1</p>
-    <div class="search-bar">
-        <input type="text" id="searchInput" onkeyup="filterSongs()" placeholder="Search for songs...">
-    </div>
-    
-    <div class="lagu" data-title="I Think I Like When It Rains">
-        <img src="/img/I THINK I LIKE WHEN IT RAINS.jpeg" alt="Song 1">
-        <p class="lagu-title">I Think I Like When It Rains - WILLIS</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song1')">Play</button>
-            <button class="btn" onclick="pauseSong('song1')">Pause</button>
-        </div>
-        <audio id="song1" src="/music/I Think I Like When It Rains.mp3"></audio>
-    </div>
-    
-    <div class="lagu" data-title="No Other Heart">
-        <img src="/img/Another one Mac demarco.jpeg" alt="Song 2">
-        <p class="lagu-title">No Other Heart - Mac Demarco</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song2')">Play</button>
-            <button class="btn" onclick="pauseSong('song2')">Pause</button>
-        </div>
-        <audio id="song2" src="/music/Mac DeMarco -- No Other Heart.mp3"></audio>
-    </div>
-    
-    <div class="lagu" data-title="Kiss and Say Goodbye">
-        <img src="/img/Kiss and Say.jpeg" alt="Song 3">
-        <p class="lagu-title">Kiss and Say Goodbye - The Manhattans </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song3')">Play</button>
-            <button class="btn" onclick="pauseSong('song3')">Pause</button>
-        </div>
-        <audio id="song3" src="/music/The Manhattans - Kiss and Say Goodbye.mp3"></audio>
-    </div>
-    
-    <div class="lagu" data-title="Lovers Rock">
-        <img src="/img/Lovers Rock.jpeg" alt="Song 4">
-        <p class="lagu-title">Lovers Rock - Tv Girl</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song4')">Play</button>
-            <button class="btn" onclick="pauseSong('song4')">Pause</button>
-        </div>
-        <audio id="song4" src="/music/Lovers Rock.mp3"></audio>
-    </div>
-    
-    <div class="lagu" data-title="Last Night On Earth">
-        <img src="/img/Green Day - 21st Century Breakdown - Album cover….jpeg" alt="Song 5">
-        <p class="lagu-title">Last Night On Earth - Green Day</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song5')">Play</button>
-            <button class="btn" onclick="pauseSong('song5')">Pause</button>
-        </div>
-        <audio id="song5" src="/music/last night on earth.mp3"></audio>
-    </div>
-    
-    <div class="lagu" data-title="Creep">
-        <img src="/img/Radiohead - The Bends.jpeg" alt="Song 6">
-        <p class="lagu-title">Creep - Radiohead</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song6')">Play</button>
-            <button class="btn" onclick="pauseSong('song6')">Pause</button>
-        </div>
-        <audio id="song6" src="/music/Creep (1).mp3"></audio>
-    </div>
+<body class="bg-gradient-to-b from-gray-900 to-black text-white font-sans flex flex-col items-center">
 
-    <div class="lagu" data-title="I Can't Handle Change">
-        <img src="/img/I Can't Handle Change.jpeg" alt="Song 7">
-        <p class="lagu-title">I Can't Handle Change - Roar</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song7')">Play</button>
-            <button class="btn" onclick="pauseSong('song7')">Pause</button>
-        </div>
-        <audio id="song7" src="/music/I cant handle.mp3"></audio>
-    </div>
+    <section class="w-full relative bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 py-20 text-center px-4 sm:px-8 lg:px-16">
+        <!-- Title -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 relative">
+            <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-600 blur-sm opacity-60 rounded-full animate__animated animate__pulse animate__infinite"></span>
+            <span class="relative z-10 text-shadow-md animate__animated animate__fadeInUp animate__delay-1s">
+                Welcome to My Playlist
+            </span>
+        </h1>
 
-    <div class="lagu" data-title="Mr Loverman">
-        <img src="/img/Ricky Montgomery _ Montgomery Ricky.jpeg" alt="Song 8">
-        <p class="lagu-title">Mr Loverman - Ricky Montgomery </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song8')">Play</button>
-            <button class="btn" onclick="pauseSong('song8')">Pause</button>
-        </div>
-        <audio id="song8" src="/music/Ricky Montgomery - Mr Loverman.mp3"></audio>
-    </div>
+        <!-- Subtitle -->
+        <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8 animate__animated animate__fadeIn animate__delay-2s">
+            Discover your favorite tracks and vibe with the rhythm of life.
+        </p>
 
-    <div class="lagu" data-title="Walking Back Home">
-        <img src="/img/Walking Back Home.jpeg" alt="Song 9">
-        <p class="lagu-title">Walking Back Home - Vira Talisa Dharmawan </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song9')">Play</button>
-            <button class="btn" onclick="pauseSong('song9')">Pause</button>
+        <!-- Request Song Form -->
+        <div class="mt-8">
+            <p class="text-lg sm:text-xl text-gray-100 mb-6">Got a song in mind? Request it below!</p>
+            
+            <!-- Form -->
+            <form action="https://wa.me/6287892219615/?text=min%20saya%20ingin%20request%20lagu%20" method="GET" class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-6">
+                <!-- Input Field -->
+                <input type="text" id="songRequest" name="songRequest" placeholder="Enter song name" 
+                    class="w-full sm:w-80 px-6 py-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 ease-in-out transform hover:scale-105" 
+                    required>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg shadow-xl hover:shadow-2xl transition transform hover:scale-105">
+                    Request Song
+                </button>
+            </form>
         </div>
-        <audio id="song9" src="/music/Vira Talisa Dharmawan - Walking Back Home.mp3"></audio>
-    </div>
+    
+        <!-- Explore Button -->
+        <div class="mt-8">
+            <button class="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg shadow-xl hover:shadow-2xl transition transform hover:scale-105" onclick="scrollToContent()">
+               <a href="#music">Explore Now</a>
+            </button>
+        </div>
+    
+        <!-- Gradient Overlay at Bottom -->
+        <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black to-transparent"></div>
+    </section>
+    
+    
 
-    <div class="lagu" data-title="Here With Me">
-        <img src="/img/Here with me.jpeg" alt="Song 10">
-        <p class="lagu-title">Here With Me - d4vd</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song10')">Play</button>
-            <button class="btn" onclick="pauseSong('song10')">Pause</button>
+    <!-- Header -->
+    <header class="w-full bg-gray-800/90 py-6 text-center shadow-md backdrop-blur-md sticky top-0 z-10" id="music">
+        <div class="flex justify-center items-center space-x-4">
+            <img src="/img/logo.png" alt="Music Icon" class="h-8 w-8">
+            <h2 class="text-3xl font-bold">My Playlist</h2>
         </div>
-        <audio id="song10" src="/music/d4vd - Here With Me [Official Music Video].mp3"></audio>
-    </div>
+        <div class="mt-4">
+            <input type="text" id="searchInput" 
+                class="w-3/4 md:w-1/2 px-4 py-2 rounded-lg bg-gray-700/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400" 
+                placeholder="Search for songs..." onkeyup="filterSongs()">
+        </div>
+    </header>
 
-    <div class="lagu" data-title="Someone To Spend Time With">
-        <img src="/img/Lost Retros.jpeg" alt="Song 11">
-        <p class="lagu-title">Someone To Spend Time With - Los Retros</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song11')">Play</button>
-            <button class="btn" onclick="pauseSong('song11')">Pause</button>
-        </div>
-        <audio id="song11" src="/music/Los Retros - Someone To Spend Time With.mp3"></audio>
-    </div>
+    <main class="w-full max-w-5xl mt-8 px-4">
+        <!-- Container untuk pesan "Lagu tidak tersedia" -->
+        <p id="noSongsMessage" class="hidden text-center text-gray-300 text-lg">
+            Lagu tidak tersedia. Coba cari judul lain!
+        </p>
+        
+        <!-- Container untuk daftar lagu -->
+        <div id="songsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!--lagu -->
+            <div class="lagu bg-gray-800/70 rounded-lg shadow-lg p-4 flex items-center hover:shadow-xl transform hover:scale-105" data-title="I Think I Like When It Rains">
+                <img src="/img/I THINK I LIKE WHEN IT RAINS.jpeg" alt="Song 1" class="rounded-md w-32 h-32 object-cover">
+                <div class="ml-4 flex-1">
+                    <p class="lagu-title text-lg font-semibold">I Think I Like When It Rains</p>
+                    <p class="text-sm text-gray-400">WILLIS</p>
+                    <div class="btn-container mt-4 flex space-x-4">
+                        <button class="btn px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" onclick="playSong('song1')">Play</button>
+                        <button class="btn px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600" onclick="pauseSong('song1')">Pause</button>
+                    </div>
+                </div>
+                <audio id="song1" src="/music/I Think I Like When It Rains.mp3"></audio>
+            </div>
 
-    <div class="lagu" data-title="My kind of Women">
-        <img src="/img/MAC DEMARCO.jpeg" alt="Song 12">
-        <p class="lagu-title">My Kind Of Women - Mac Demarco</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song12')">Play</button>
-            <button class="btn" onclick="pauseSong('song12')">Pause</button>
+            <!--lagu -->
+            <div class="lagu bg-gray-800/70 rounded-lg shadow-lg p-4 flex items-center hover:shadow-xl transform hover:scale-105" data-title="Last Night On Earth">
+                <img src="/img/Green Day - 21st Century Breakdown - Album cover….jpeg" alt="Song 2" class="rounded-md w-32 h-32 object-cover">
+                <div class="ml-4 flex-1">
+                    <p class="lagu-title text-lg font-semibold">Last Night On Earth</p>
+                    <p class="text-sm text-gray-400">Greem Day</p>
+                    <div class="btn-container mt-4 flex space-x-4">
+                        <button class="btn px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" onclick="playSong('song2')">Play</button>
+                        <button class="btn px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600" onclick="pauseSong('song2')">Pause</button>
+                    </div>
+                </div>
+                <audio id="song2" src="/music/last night on earth.mp3"></audio>
+            </div>
+
+            <!--lagu -->
+            <div class="lagu bg-gray-800/70 rounded-lg shadow-lg p-4 flex items-center hover:shadow-xl transform hover:scale-105" data-title="Amtrak">
+                <img src="/img/Amtrak.jpeg" alt="Song 2" class="rounded-md w-32 h-32 object-cover">
+                <div class="ml-4 flex-1">
+                    <p class="lagu-title text-lg font-semibold">Amtrak</p>
+                    <p class="text-sm text-gray-400">Los Retros</p>
+                    <div class="btn-container mt-4 flex space-x-4">
+                        <button class="btn px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" onclick="playSong('song3')">Play</button>
+                        <button class="btn px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600" onclick="pauseSong('song3')">Pause</button>
+                    </div>
+                </div>
+                <audio id="song3" src="/music/last night on earth.mp3"></audio>
+            </div>            
+
         </div>
-        <audio id="song12" src="/music/Mac DeMarco My Kind Of Woman.mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Amtrak">
-        <img src="/img/Amtrak.jpeg" alt="Song 13">
-        <p class="lagu-title">Amtrak - Los Retros</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song13')">Play</button>
-            <button class="btn" onclick="pauseSong('song13')">Pause</button>
+        
+    </main>
+
+    <footer class="w-full bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-600 text-white py-10 mt-12">
+        <div class="max-w-screen-lg mx-auto text-center">
+            <!-- Copyright Text -->
+            <p class="text-lg font-medium mb-4">© 2024 My Playlist. All Rights Reserved.</p>
+    
+            <!-- Privacy & Terms Links -->
+            <div class="mt-4">
+                <a href="#" class="text-yellow-300 hover:text-yellow-500 mx-3 font-semibold">Privacy Policy</a>
+                <a href="#" class="text-yellow-300 hover:text-yellow-500 mx-3 font-semibold">Terms of Service</a>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="mt-6 flex justify-center space-x-6">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/n4ve.666/" class="text-yellow-300 hover:text-yellow-500" target="_blank">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <!-- Spotify -->
+                <a href="https://open.spotify.com/user/l6asl12shk2mbi279b91snlc3?si=fe3d527714324780" class="text-yellow-300 hover:text-yellow-500" target="_blank">
+                    <i class="fab fa-spotify fa-2x"></i>
+                </a>
+            </div>
+            
+            <!-- Music Icon Section -->
+            <div class="mt-8">
+                <i class="fas fa-headphones fa-3x animate__animated animate__pulse animate__infinite text-yellow-300"></i>
+            </div>
         </div>
-        <audio id="song13" src="/music/Amtrak.mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Peak Of Love">
-        <img src="/img/aldi-haqq.jpeg" alt="Song 14">
-        <p class="lagu-title">Peak Of Love - Aldi Haqq</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song14')">Play</button>
-            <button class="btn" onclick="pauseSong('song14')">Pause</button>
-        </div>
-        <audio id="song14" src="/music/Aldi Haqq - Peak of Love (Official Lyric Video).mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Mesra-mesraannya kecil-kecilan dulu">
-        <img src="/img/Sal Priadi.jpeg" alt="Song 15">
-        <p class="lagu-title">Mesra-mesraannya kecil-kecilan dulu - Sal Priadi</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song15')">Play</button>
-            <button class="btn" onclick="pauseSong('song15')">Pause</button>
-        </div>
-        <audio id="song15" src="/music/Sal Priadi - Mesra-mesraannya kecil-kecilan dulu (Official Music Video).mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Mahika">
-        <img src="/img/Mahika - Adie.jpeg" alt="Song 16">
-        <p class="lagu-title">Mahika - Adie, Janine Berdin</p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song16')">Play</button>
-            <button class="btn" onclick="pauseSong('song16')">Pause</button>
-        </div>
-        <audio id="song16" src="/music/Adie, Janine Berdin - Mahika (Official Audio).mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Sorai">
-        <img src="/img/Sorai -Nadin (Acoustic Cover).jpeg" alt="Song 17">
-        <p class="lagu-title">Sorai - Nadin Amizah </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song17')">Play</button>
-            <button class="btn" onclick="pauseSong('song17')">Pause</button>
-        </div>
-        <audio id="song17" src="/music//Nadin Amizah - Sorai (Official Music Video).mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Don't look back in Anger">
-        <img src="/img/Oasis - Don't Look Back In Anger (Official Video).jpeg" alt="Song 18">
-        <p class="lagu-title">Don't look back in Anger - Oasis </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song18')">Play</button>
-            <button class="btn" onclick="pauseSong('song18')">Pause</button>
-        </div>
-        <audio id="song18" src="/music/Oasis - Don’t Look Back In Anger Lirik Terjemahan.mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Satu Bulan">
-        <img src="/img/bernadya.jpeg" alt="Song 19">
-        <p class="lagu-title">Satu Bulan - Bernadya </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song19')">Play</button>
-            <button class="btn" onclick="pauseSong('song19')">Pause</button>
-        </div>
-        <audio id="song19" src="/music/Bernadya - Satu Bulan (Official Music Video).mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Waking Up Together With You">
-        <img src="/img/Arditho Pramono.jpg" alt="Song 20">
-        <p class="lagu-title">Waking Up Together With You - Arditho Pramono </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song20')">Play</button>
-            <button class="btn" onclick="pauseSong('song20')">Pause</button>
-        </div>
-        <audio id="song20" src="/music/Waking Up Together With You.mp3"></audio>
-    </div>
-    <div class="lagu" data-title="i think they call this love">
-        <img src="/img/Elliot James Reay.jpeg" alt="Song 21">
-        <p class="lagu-title">I think they call this love - Elliot James Reay </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song21')">Play</button>
-            <button class="btn" onclick="pauseSong('song21')">Pause</button>
-        </div>
-        <audio id="song21" src="/music/Elliot James Reay - I Think They Call This Love (Lyric Video).mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Scott Street">
-        <img src="/img/Scott Street.jpeg" alt="Song 22">
-        <p class="lagu-title"> Scott Street - Phoebe Bridgers </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song22')">Play</button>
-            <button class="btn" onclick="pauseSong('song22')">Pause</button>
-        </div>
-        <audio id="song22" src="/music/Phoebe Bridgers - Scott Street (Official Video).mp3"></audio>
-    </div>
-    <div class="lagu" data-title="Nothing">
-        <img src="/img/Bruno Major - To Let A Good Thing Die - Vinyl.jpeg" alt="Song 23">
-        <p class="lagu-title"> Nothing - Bruno Major </p>
-        <div class="btn-container">
-            <button class="btn" onclick="playSong('song23')">Play</button>
-            <button class="btn" onclick="pauseSong('song23')">Pause</button>
-        </div>
-        <audio id="song23" src="/music/Bruno Major - Nothing (Lyric _ Chord Video).mp3"></audio>
-    </div>
-    <div class="footer">
-        <p>Created by Evan || © 2024</p>
-    </div>
-    <script src="/main.js"></script>
+    </footer>
+
+    <script src="main.js"></script>
+
 </body>
 </html>
